@@ -3,8 +3,6 @@ import cors from "cors";
 import { Resend } from "resend";
 
 const app = express();
-
-// const resend = new Resend(process.env.RESEND_API_KEY);
 const resend = new Resend("re_ErBE28MQ_CveCfXjbfDVMt4erBk8KKKDH");
 
 console.log(resend);
@@ -42,10 +40,6 @@ app.post("/send-otp", async (req, res) => {
     if (!response) {
       return res.status(500).json({ message: "Failed to send email" });
     }
-
-    // if (!response.error) {
-    //   return res.status(500).json({ message: "Failed to send email" });
-    // }
 
     res.status(200).json({ message: "Email sent successfully", response });
   } catch (error) {
