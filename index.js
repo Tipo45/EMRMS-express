@@ -43,9 +43,9 @@ app.post("/send-otp", async (req, res) => {
       return res.status(500).json({ message: "Failed to send email" });
     }
 
-    if (!response.error) {
-      return res.status(500).json({ message: "Failed to send email" });
-    }
+    // if (!response.error) {
+    //   return res.status(500).json({ message: "Failed to send email" });
+    // }
 
     res.status(200).json({ message: "Email sent successfully", response });
   } catch (error) {
