@@ -33,7 +33,7 @@ app.post("/send-otp", async (req, res) => {
 
   try {
     const response = await resend.emails.send({
-        from: "emrms <emrmsproject2025@emrms.online>",
+        from: "EMRMS <emrmsproject2025@emrms.online>",
         to: [email],
         subject: subject,
         html: message,
